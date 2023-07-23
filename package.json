@@ -1,6 +1,6 @@
 {
-	"name": "degit",
-	"version": "2.8.4",
+	"name": "@lchanmann/degit",
+	"version": "3.0.0",
 	"engines": {
 		"node": ">=8.0.0"
 	},

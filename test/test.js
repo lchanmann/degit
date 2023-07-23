@@ -213,10 +213,12 @@ describe('degit', function() {
 			await rimraf('.tmp');
 
 			await exec(
-				`node ${degitPath} --mode=git https://github.com/Rich-Harris/degit-test-repo-private.git .tmp/test-repo`
+				`node ${degitPath} --mode=git https://github.com/Rich-Harris/degit-test-repo.git .tmp/test-repo`
 			);
-			compare('.tmp/test-repo', {
-				'file.txt': 'hello from a private repo!'
+			compare(`.tmp/test-repo`, {
+				'file.txt': 'hello from github!',
+				subdir: null,
+				'subdir/file.txt': 'hello from a subdirectory!'
 			});
 		});
 	});
